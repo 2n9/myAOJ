@@ -21,7 +21,7 @@ public class Main {
         double sum(double... d){return Arrays.stream(d).sum();}
         long sum(long... l){return Arrays.stream(l).sum();}
         int[] ascending(int... i){Arrays.sort(i);return i;}
-        Integer[] ascending(List<Integer> i){Integer[] k= i.toArray(new Integer[0]);Arrays.sort(k);return k;}
+        Integer[] ascending(List<Integer> i){Integer[] k=i.toArray(new Integer[0]);Arrays.sort(k);return k;}
         int[] descending(int... i){i=ascending(i);for(int f=0,l=i.length-1;f<l;f++,l--){int t=i[f];i[f]=i[l];i[l]=t;}return i;}
         Integer[] descending(List<Integer> i){Integer[] k=ascending(i);for(int f=0,l=k.length-1;f<l;f++,l--){int t=k[f];k[f]=k[l];k[l]=t;}return k;}
         boolean match(int... i){for(int k:i)if(i[0]!=k)return false;return true;}
